@@ -7,7 +7,7 @@ const {
     updateWeatherById,
     deleteWeatherById
 
-} = require('.controller/weathercontroller')
+} = require('.controller/weatherController')
 
 router.get('/get-all-weather', getAllWeather)
 router.post ('/create-weather', createWeather)
