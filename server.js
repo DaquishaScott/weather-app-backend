@@ -1,7 +1,9 @@
 const express = require('express')
 const logger = require('morgan')
+
 const mongoose = require('mongoose')
-const Weather = require('./routes/model/Weather')
+const Weather = require('./routes/weather/model/Weather')
+const weatherRouter = require('./routes/weatherRouter')
 
 mongoose
 .connect("mongodb://127.0.0.1:27017/weather-app")

@@ -1,4 +1,5 @@
-const Weather = require("../model/Weather") 
+const Weather = require('../model/Weather') 
+
 
 
 async function getAllWeather(req, res){
@@ -7,7 +8,7 @@ async function getAllWeather(req, res){
       res.json({message:"Weather found",payload: foundWeather})
    } catch (error) {
       res.status(500).json({message:"Error", error:error})
-      // handling request now
+      
    }
 }
 async function createWeather(req, res){
@@ -29,7 +30,7 @@ async function updateWeatherById(req, res){
    }
 }
 
-async function WeatherById(req, res){
+async function deleteWeatherById(req, res){
    try {
       const deleteWeather =await User.findByIdAndDelete(req.param.id)
       
@@ -41,8 +42,8 @@ async function WeatherById(req, res){
 }
 
 module.exports={
-   getAllUsers,
-   createUser,
-   updateUserById,
-   deleteUserById
+   getAllWeather,
+   createWeather,
+   updateWeatherById,
+   deleteWeatherById
 }
